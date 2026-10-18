@@ -36,7 +36,7 @@ def process_video():
         output_path = os.path.join(temp_dir, "output.mp4")
         video.save(input_path)
 
-        scale = "2" if method == "itscale2" else "6"
+        scale = "2" if method == "itscale2" else "4"
 
         command = [
             "ffmpeg", "-y",
