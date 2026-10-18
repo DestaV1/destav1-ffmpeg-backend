@@ -26,7 +26,7 @@ def process_video():
     method = request.form.get("method", "")
 
     if method not in ("itscale2", "itscale4"):
-    return jsonify({"error": "Pilih itscale2 atau itscale4"}), 400
+        return jsonify({"error": "Pilih itscale2 atau itscale4"}), 400
 
     if not video.filename:
         return jsonify({"error": "Nama file kosong"}), 400
