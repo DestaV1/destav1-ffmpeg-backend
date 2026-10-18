@@ -1,11 +1,14 @@
-
 import os
 import subprocess
 import tempfile
 from flask import Flask, request, jsonify, send_file
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, origins=["https://destav1.github.io"])
+
 app.config["MAX_CONTENT_LENGTH"] = 500 * 1024 * 1024
+
 
 @app.get("/")
 def home():
